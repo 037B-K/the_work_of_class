@@ -35,5 +35,3 @@ class Kobold(NPC):
         print(person, " is my enemy")
 
 
-guy = Kobold ("He", "Working", "musclular meatball", "Chicken meat")
-guy.attack("enemy one")
