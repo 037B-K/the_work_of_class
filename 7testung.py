@@ -1,5 +1,6 @@
 import random
 
+
 class NPC:
     def __init__(self, name, job, race, espece):
         self.force = random.randint(1, 6) + random.randint(1, 6) + random.randint(1, 6)
@@ -16,19 +17,23 @@ class NPC:
         self.espece = espece
 
     def show_stats(self):
-        print("Force: ", self.force, "\nAgilite: ", self.agilite, "\nConstitution: ", self.constitution, "\nIntelligence: ",
-              self.intelligence, "\nSagesse: ", self.sagesse, "\nCharisme: ", self.charisme, "\nClasse d'armure: ", self.armor,
-              "\nPoints de vie: ", self.pt_de_vie, "\nNom: ", self.nom, "\nProfession: ", self.job, "\nRace: ", self.race,
+        print("Force: ", self.force, "\nAgilite: ", self.agilite, "\nConstitution: ", self.constitution,
+              "\nIntelligence: ",
+              self.intelligence, "\nSagesse: ", self.sagesse, "\nCharisme: ", self.charisme, "\nClasse d'armure: ",
+              self.armor,
+              "\nPoints de vie: ", self.pt_de_vie, "\nNom: ", self.nom, "\nProfession: ", self.job, "\nRace: ",
+              self.race,
               "\nEspece: ", self.espece)
 
 
-
 class Kobold(NPC):
-    def __init__(self):
-        super.__init__(self)
-        pass
+    def __init__(self, name, job, race, espece):
+        super().__init__(name, job, race, espece)
+
+
     def attack(self, person):
-        pass
+        print(person, " is my enemy")
 
 
-
+guy = Kobold ("He", "Working", "musclular meatball", "Chicken meat")
+guy.attack("enemy one")
