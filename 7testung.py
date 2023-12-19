@@ -31,7 +31,20 @@ class Kobold(NPC):
         super().__init__(name, job, race, espece)
 
 
-    def attack(self, person):
-        print(person, " is my enemy")
+    def attack(self, x):
+        print(x, " is my enemy")
 
+    def damaged(self, damage):
+        self.pt_de_vie = self.pt_de_vie - damage
+
+
+class Hero(NPC):
+    def __init__(self, name, job, race, espece):
+        super().__init__(name, job, race, espece)
+
+    def attack(self, x):
+        print(x, " is my enemy")
+
+    def damaged(self, damage):
+        self.pt_de_vie = self.pt_de_vie - damage
 
